@@ -113,7 +113,7 @@ jobs:
   toppings:
     runs-on: ubuntu-latest
     timeout-minutes: 1
-    if: github.event_name == 'pull_request' && contains(github.event.pull_request.title, 'toppings')
+    if: github.event_name == 'pull_request_target' && contains(github.event.pull_request.title, 'toppings')
     permissions:
       id-token: write
     env:
